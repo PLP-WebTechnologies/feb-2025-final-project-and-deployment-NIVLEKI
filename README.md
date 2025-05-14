@@ -15,7 +15,7 @@ Blog Website: Implement a multi-page site with navigation.
 Ecommerce Website: Implement a multi-page site with navigation.
 
 >[!NOTE]
-> - Include at least:
+> - Include at least
 > - A responsive design.
 > - JavaScript interactivity.
 > - A deployment link.
