@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Articles | TechTalk</title>
+    <meta name="description" content="Browse all our articles about web development and programming">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <h1 class="site-title">TechTalk</h1>
+            <p class="site-tagline">Insights for the modern developer</p>
+        </div>
+        <nav class="main-nav">
+            <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="articles.html" class="active">Articles</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="all-articles">
+            <h2>All Articles</h2>
+            <div class="filter-controls">
+                <label for="category-filter">Filter by Category:</label>
+                <select id="category-filter">
+                    <option value="all">All Categories</option>
+                    <option value="javascript">JavaScript</option>
+                    <option value="css">CSS</option>
+                    <option value="react">React</option>
+                    <option value="webdev">Web Development</option>
+                </select>
+            </div>
+            
+            <div class="articles-grid">
+                <article class="article-card" data-category="javascript">
+                    <img src="https://source.unsplash.com/random/400x300/?javascript" alt="JavaScript article" class="article-image">
+                    <div class="article-content">
+                        <h3>Understanding JavaScript Closures</h3>
+                        <p class="article-meta">Posted on <time datetime="2023-05-15">May 15, 2023</time> | <span class="category">JavaScript</span></p>
+                        <p class="article-excerpt">Learn how closures work in JavaScript and practical use cases for this powerful feature.</p>
+                        <a href="article-closures.html" class="read-more">Read Article</a>
+                    </div>
+                </article>
+
+                <article class="article-card" data-category="css">
+                    <img src="https://source.unsplash.com/random/400x300/?css" alt="CSS article" class="article-image">
+                    <div class="article-content">
+                        <h3>CSS Grid vs Flexbox</h3>
+                        <p class="article-meta">Posted on <time datetime="2023-05-10">May 10, 2023</time> | <span class="category">CSS</span></p>
+                        <p class="article-excerpt">When to use Grid and when to use Flexbox? We break down the differences.</p>
+                        <a href="article-grid-flexbox.html" class="read-more">Read Article</a>
+                    </div>
+                </article>
+
+                <article class="article-card" data-category="react">
+                    <img src="https://source.unsplash.com/random/400x300/?react" alt="React article" class="article-image">
+                    <div class="article-content">
+                        <h3>React Hooks Explained</h3>
+                        <p class="article-meta">Posted on <time datetime="2023-05-05">May 5, 2023</time> | <span class="category">React</span></p>
+                        <p class="article-excerpt">Learn how to use React Hooks to simplify your functional components.</p>
+                        <a href="article-react-hooks.html" class="read-more">Read Article</a>
+                    </div>
+                </article>
+
+                <article class="article-card" data-category="webdev">
+                    <img src="https://source.unsplash.com/random/400x300/?webdevelopment" alt="Web Development article" class="article-image">
+                    <div class="article-content">
+                        <h3>The Future of WebAssembly</h3>
+                        <p class="article-meta">Posted on <time datetime="2023-04-28">April 28, 2023</time> | <span class="category">Web Development</span></p>
+                        <p class="article-excerpt">WebAssembly is changing how we think about web performance.</p>
+                        <a href="article-webassembly.html" class="read-more">Read Article</a>
+                    </div>
+                </article>
+
+                <article class="article-card" data-category="javascript">
+                    <img src="https://source.unsplash.com/random/400x300/?code" alt="JavaScript article" class="article-image">
+                    <div class="article-content">
+                        <h3>ES2023 New Features</h3>
+                        <p class="article-meta">Posted on <time datetime="2023-04-20">April 20, 2023</time> | <span class="category">JavaScript</span></p>
+                        <p class="article-excerpt">Explore the latest features coming to JavaScript in ES2023.</p>
+                        <a href="article-es2023.html" class="read-more">Read Article</a>
+                    </div>
+                </article>
+
+                <article class="article-card" data-category="css">
+                    <img src="https://source.unsplash.com/random/400x300/?design" alt="CSS article" class="article-image">
+                    <div class="article-content">
+                        <h3>CSS Custom Properties</h3>
+                        <p class="article-meta">Posted on <time datetime="2023-04-15">April 15, 2023</time> | <span class="category">CSS</span></p>
+                        <p class="article-excerpt">How to use CSS variables to create more maintainable stylesheets.</p>
+                        <a href="article-css-variables.html" class="read-more">Read Article</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2023 TechTalk Blog. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" aria-label="Twitter">🐦</a>
+                <a href="#" aria-label="GitHub">💻</a>
+                <a href="#" aria-label="LinkedIn">🔗</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Filter articles by category
+        document.getElementById('category-filter').addEventListener('change', function() {
+            const selectedCategory = this.value;
+            const articles = document.querySelectorAll('.article-card');
+            
+            articles.forEach(article => {
+                if (selectedCategory === 'all' || article.dataset.category === selectedCategory) {
+                    article.style.display = 'block';
+                } else {
+                    article.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
